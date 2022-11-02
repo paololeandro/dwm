@@ -1,5 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
+/* for XF86 Media Keys */
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -64,6 +67,8 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,          SHCMD("~/.config/dotfiles/scripts/volume+") },
+    	{ 0,                            XF86XK_AudioLowerVolume,  spawn,          SHCMD("~/.config/dotfiles/scripts/volume-") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
