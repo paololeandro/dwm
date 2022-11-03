@@ -67,9 +67,9 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,          SHCMD("~/.config/dotfiles/scripts/volume+") },
-    	{ 0,                            XF86XK_AudioLowerVolume,  spawn,          SHCMD("~/.config/dotfiles/scripts/volume-") },
-    	{ 0,                            XF86XK_AudioMute,         spawn,          SHCMD("~/.config/dotfiles/scripts/toggle-mute") },
+	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,          SHCMD("~/.config/dotfiles/scripts/volume-up") },
+    	{ 0,                            XF86XK_AudioLowerVolume,  spawn,          SHCMD("~/.config/dotfiles/scripts/volume-down") },
+    	{ 0,                            XF86XK_AudioMute,         spawn,          SHCMD("~/.config/dotfiles/scripts/volume-mute") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
