@@ -11,7 +11,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=12" };
 static const char dmenufont[]       = "monospace:size=12";
 static const char col_gray1[]       = "#272727";
-static const char col_gray2[]       = "#D0D0D0";
+static const char col_gray2[]       = "#353535";
 static const char col_gray3[]       = "#D0D0D0";
 static const char col_gray4[]       = "#D0D0D0";
 static const char col_cyan[]        = "#6a9fb5";
@@ -67,6 +67,7 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_x,      spawn,         SHCMD("~/.config/dotfiles/scripts/powermenu") },
 	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,          SHCMD("~/.config/dotfiles/scripts/volume-up") },
     	{ 0,                            XF86XK_AudioLowerVolume,  spawn,          SHCMD("~/.config/dotfiles/scripts/volume-down") },
     	{ 0,                            XF86XK_AudioMute,         spawn,          SHCMD("~/.config/dotfiles/scripts/volume-mute") },
