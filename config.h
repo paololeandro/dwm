@@ -65,8 +65,8 @@ static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_p,      spawn,         SHCMD("~/.config/dotfiles/scripts/launcher") },
 	{ MODKEY,                       XK_x,      spawn,         SHCMD("~/.config/dotfiles/scripts/powermenu") },
 	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,          SHCMD("~/.config/dotfiles/scripts/volume-up") },
     	{ 0,                            XF86XK_AudioLowerVolume,  spawn,          SHCMD("~/.config/dotfiles/scripts/volume-down") },
